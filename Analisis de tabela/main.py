@@ -1,9 +1,19 @@
 from get_tabela_data import get_tabela
 import plotly.express as px
+import matplotlib.pyplot as plt
 if __name__ == '__main__':
-    # for cols in get_tabela().columns:
+
+    salarios = get_tabela()[get_tabela().columns[3]]
+    edades = get_tabela()[get_tabela().columns[2]]
         
-    grafico = px.histogram(get_tabela(), x=get_tabela().columns[2], y="Nota (1-100)", text_auto=True, histfunc='avg', nbins=10)
-        # pass
-    grafico.show()
-    pass
+    plt.bar(x=salarios, 
+            height=edades,
+            width=get_tabela().__len__())
+    
+    plt.xlabel("Salario")
+    plt.ylabel("Edad")
+    plt.show()
+
+
+pass    
+  

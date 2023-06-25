@@ -32,4 +32,4 @@ for linha in tabela.index:
 
 nav.quit()
 tabela["Comprar"] = tabela["Preço Ideal"] > tabela["Preço Atual"]
-tabela.to_excel("commodities_atual.xlsx", index=False)
+tabela.to_excel("Generaçao de tabelas/commodities_atual.xlsx", index=False)
